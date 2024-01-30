@@ -7,7 +7,11 @@ namespace R5T.L0086.Construction
     {
         static void Main()
         {
-            Console.WriteLine("Hello World!");
+            var filePath = Instances.FilePaths.GitIgnoreTemplateFilePath;
+
+            var fileExists = Instances.FileSystemOperator.Exists_File(filePath);
+
+            Console.WriteLine($"{fileExists}: exists-file\n\t{filePath}");
         }
     }
 }
